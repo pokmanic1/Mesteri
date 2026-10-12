@@ -21,29 +21,30 @@
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
 
-@utility principal-gradient{
-background: radial-gradient(circle at center, #0e082c 0%, #030014 100%);
+@utility principal-gradient {
+    background: radial-gradient(circle at center, #0e082c 0%, #030014 100%);
 }
 
-@utility h1-style{
-    @apply text-center text-white text-[80px] font-serif-inria my-auto 
+@utility h1-style {
+    @apply text-center text-white text-[80px] font-serif-inria my-auto; 
 }
 
 @utility text-gradient {
-background: linear-gradient(to right, #3b82f6, #ec4899);
+    background: linear-gradient(to right, #3b82f6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
-
 
 @utility gradient-secundar {
     background: linear-gradient(to bottom, #003161, #002396);
 }
 
-
 @utility border-gradient {
-    border: 3px solid;
+    border-width: 3px;
+    border-style: solid;
     border-image: linear-gradient(to bottom, #0059B3, #001455) 1;
 }
-
 
 @utility radial-gradient {
     background: radial-gradient(
@@ -55,8 +56,12 @@ background: linear-gradient(to right, #3b82f6, #ec4899);
 }
 
 @utility masked-img {
+    -webkit-mask-image: url("/images/mask-img.png");
     mask-image: url("/images/mask-img.png");
+    -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    -webkit-mask-position: center;
     mask-position: center;
+    -webkit-mask-size: 50%;
     mask-size: 50%;
 }
