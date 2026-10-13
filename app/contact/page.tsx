@@ -7,9 +7,11 @@ const Contact = () => {
 
     return (
         <section className='col-center principal-gradient w-full min-w-[375px] min-h-[95dvh] px-[5px] py-[50px]'>
-            <h1 className='title text-center text-white text-[42px] sm:text-[48px] md:text-[54px] lg:text-[60px] font-serif-inria my-auto mb-6'>
+
+            <h1 className="title font-montserrat text-center text-black text-[42px] sm:text-[48px] md:text-[54px] lg:text-[60px] my-auto mb-6">
                 Contact
             </h1>
+
             <div className='w-[80%] max-w-[1200px] gap-10 grid grid-cols-1 md:grid-cols-2 items-center'>
 
                 <div className="map-card relative min-h-[400px] rounded-2xl overflow-hidden bg-slate-900/40 backdrop-blur-md border border-white/10 shadow-2xl flex-center text-white/50 text-sm font-medium">
