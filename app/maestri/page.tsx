@@ -1,39 +1,38 @@
 import React from 'react';
 import Image from 'next/image';
-
 const Maestri = () => {
     return (
-        <section className='w-full min-h-[calc(100dvh-60px)] bg-white-first py-10'>
-            <h1 className="w-full mt-5 md:mt-10 text-xl sm:text-2xl md:text-4xl font-bold text-center tracking-tight text-gray-900">
+        <section className='w-full min-h-[calc(100dvh-60px)] bg-white-first py-6 sm:py-10'>
+            <h1 className="w-full mt-2 sm:mt-5 md:mt-10 text-lg sm:text-2xl md:text-4xl font-bold text-center tracking-tight text-gray-900">
                 Maetri
             </h1>
 
-            <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4 sm:p-6 md:p-10">
+            <div className="w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[6px] sm:gap-3 md:gap-4 p-2 sm:p-6 md:p-10">
                 {
                     arrMesteri.map(arrMesteriProfesie => (
                         arrMesteriProfesie.mesteri.map(mester => (
-                            <div key={mester.id} className="border border-gray-800 bg-black/5 hover:shadow-lg transition-shadow duration-200 h-[320px] sm:h-[360px] md:h-[380px] lg:h-[400px] p-2">
+                            <div key={mester.id} className="border border-gray-800 bg-black/5 hover:shadow-lg transition-shadow duration-200 h-[210px] sm:h-[300px] md:h-[360px] lg:h-[400px] p-1 sm:p-2">
                                 <div className='relative w-full h-full overflow-hidden'>
                                     <Image
                                         src={"/Rectangle 11.png"}
                                         alt={mester.nume}
                                         fill
-                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                                        sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 20vw"
                                         className="object-cover"
                                     />
                                     
-                                    <div className='absolute bottom-0 left-0 right-0 h-[45%] bg-gradient-to-t from-black/90 via-black/60 to-transparent flex flex-col justify-end p-3 text-white'>
-                                        <h2 className='text-base sm:text-lg font-medium leading-tight drop-shadow-md'>
+                                    <div className='absolute bottom-0 left-0 right-0 h-[60%] sm:h-[45%] bg-gradient-to-t from-black/95 via-black/70 to-transparent flex flex-col justify-end p-1.5 sm:p-3 text-white'>
+                                        <h2 className='text-[10px] xs:text-xs sm:text-base font-medium leading-tight drop-shadow-md truncate'>
                                             Nume: <span className="font-normal">{mester.nume}</span>
                                         </h2>
-                                        <p className='text-xs sm:text-sm font-light text-gray-200 mt-1 drop-shadow-md'>
+                                        <p className='text-[9px] xs:text-[10px] sm:text-xs font-light text-gray-200 mt-0.5 drop-shadow-md truncate'>
                                             Profesia: <span className="font-normal">{mester.categorie}</span>
                                         </p>
-                                        <p className='text-xs sm:text-sm font-light text-gray-200 drop-shadow-md'>
+                                        <p className='text-[9px] xs:text-[10px] sm:text-xs font-light text-gray-200 drop-shadow-md truncate'>
                                             Oras: <span className="font-normal">{mester.oras}</span>
                                         </p>
-                                        <p className='text-xs sm:text-sm font-light text-gray-200 drop-shadow-md'>
-                                            Experienta: <span className="font-normal">{mester.experienta} experiență</span>
+                                        <p className='text-[9px] xs:text-[10px] sm:text-xs font-light text-gray-200 drop-shadow-md truncate'>
+                                            Exp: <span className="font-normal">{mester.experienta}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -45,7 +44,6 @@ const Maestri = () => {
         </section>
     );
 };
-
 const arrMesteri = [
     {
         slugProfesie: 'electric',
