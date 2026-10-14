@@ -10,7 +10,7 @@
 }
 
 @utility flex-full {
-    @apply w-full h-[calc(100dvh-60px)] flex flex-col justify-center items-center ;
+    @apply w-full h-[calc(100dvh-60px)]  flex flex-col justify-center items-center min-w-[375px] ;
 }
 
 @utility col-center {

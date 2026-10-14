@@ -8,7 +8,7 @@ export default function Home() {
       style={{ backgroundImage: "url('/Hero/HeroBg.png')" }}
     >
       <div className="max-w-2xl flex flex-col items-center md:items-start gap-4">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white ">
+        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-xl">
           Găsește-ți meșterul potrivit în doar 10 secunde.
         </h1>
 

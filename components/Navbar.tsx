@@ -27,7 +27,7 @@ const Navbar = () => {
                 </Link>
 
                 <div className="pages text-center text-black hidden md:flex items-center justify-center   md:gap-[25px] lg:gap-[30px] font-serif-playfair">
-                    <Link href='/meniu'>Maestri</Link>
+                    <Link href='/maestri'>Maestri</Link>
                     <Link href='/programari'>Servicii</Link>
                     <Link href='/recenzii'>Despre noi</Link>
                 </div>
@@ -38,7 +38,7 @@ const Navbar = () => {
                     <span className='border-2 border-black w-[25px]'></span>
                 </button>
                 <div className={`absolute  top-14 right-0 z-50 flex flex-col w-56 font-serif-playfair text-sm md:hidden text-black bg-[#F8FAFC] p-5 rounded-2xl shadow-xl border border-gray-400 gap-4 ${burger ? 'flex' : 'hidden'}`}>
-                    <Link className=' border-b border-gray-400' href='/meniu'>Maestri</Link>
+                    <Link className=' border-b border-gray-400' href='/maestri'>Maestri</Link>
                     <Link className=' border-b border-gray-400' href='/programari' >Servicii</Link>
                     <Link className=' border-b border-gray-400' href='/recenzii' >Despre noi</Link>
                 </div>
