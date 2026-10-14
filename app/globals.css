@@ -20,17 +20,17 @@
 @utility abs-center {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
-@utility blue-first {
-    @apply bg-[#0F172A]
+@utility bg-blue-first {
+    @apply bg-[#0F172A];
 }
-@utility yellow-first {
-    @apply bg-[#F59E0B]
+@utility bg-yellow-first {
+    @apply bg-[#F59E0B];
 }
-@utility orange-first {
-    @apply bg-[#EA580C]
+@utility bg-orange-first {
+    @apply bg-[#EA580C];
 }
-@utility white-first {
-    @apply bg-[#F8FAFC]
+@utility bg-white-first {
+    @apply bg-[#F8FAFC];
 }
 
 @utility principal-gradient {

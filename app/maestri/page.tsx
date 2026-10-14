@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 const Maestri = () => {
     return (
-        <section className='w-full min-h-[calc(100dvh-60px)] bg-white-first py-6 sm:py-10'>
+        <section className='w-full min-h-[calc(100dvh-60px)] bg-gradient-to-br from-gray-50 via-white to-gray-100 py-6 sm:py-10'>
             <h1 className="w-full mt-2 sm:mt-5 md:mt-10 text-lg sm:text-2xl md:text-4xl font-bold text-center tracking-tight text-gray-900">
                 Maetri
             </h1>
@@ -11,7 +11,7 @@ const Maestri = () => {
                 {
                     arrMesteri.map(arrMesteriProfesie => (
                         arrMesteriProfesie.mesteri.map(mester => (
-                            <div key={mester.id} className="border border-gray-800 bg-black/5 hover:shadow-lg transition-shadow duration-200 h-[210px] sm:h-[300px] md:h-[360px] lg:h-[400px] p-1 sm:p-2">
+                            <div key={mester.id} className="border border-gray-800 bg-blue-first  hover:shadow-lg transition-shadow duration-200 h-[210px] sm:h-[300px] md:h-[360px] lg:h-[400px] p-1 ">
                                 <div className='relative w-full h-full overflow-hidden'>
                                     <Image
                                         src={"/Rectangle 11.png"}
