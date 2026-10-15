@@ -21,6 +21,8 @@ Fiecare profil afișat pe site include strict următoarele elemente:
 * Galerie foto cu lucrările efectuate
 * Număr de telefon (buton direct de apelare `tel:`)
 
+
+
 ## 4. Design & User Experience (UX/UI)
 * **Design Profesionist:** Aspect vizual îngrijit, culori calde/încrezătoare, carduri clare, tipografie lizibilă.
 * **Simplitate Extremă:** Fără funcționalități complicate, pagini încărcate sau pași inutili. Utilizatorul intră, filtrează categoria, vede meșterul și îl sună direct.

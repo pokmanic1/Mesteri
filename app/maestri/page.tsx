@@ -1,17 +1,49 @@
 import React from 'react';
 import Image from 'next/image';
+
 const Maestri = () => {
     return (
-        <section className='w-full min-h-[calc(100dvh-60px)] bg-gradient-to-br from-gray-50 via-white to-gray-100 py-6 sm:py-10'>
-            <h1 className="w-full mt-2 sm:mt-5 md:mt-10 text-lg sm:text-2xl md:text-4xl font-bold text-center tracking-tight text-gray-900">
-                Maetri
-            </h1>
+        <section className='w-full min-h-[calc(100dvh-60px)] bg-slate-50 py-6 sm:py-10 relative overflow-hidden'>
 
-            <div className="w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[6px] sm:gap-3 md:gap-4 p-2 sm:p-6 md:p-10">
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none -z-0" />
+      
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-gradient-to-b from-[#F59E0B]/10 via-[#EA580C]/35 to-transparent blur-3xl pointer-events-none -z-0" />
+            <div className="absolute -top-20 left-1/3 w-[500px] h-[500px] bg-[#F59E0B]/25 rounded-full blur-[120px] pointer-events-none -z-0" />
+            <div className="absolute top-1/4 right-10 w-96 h-96 bg-[#EA580C]/10 rounded-full blur-[100px] pointer-events-none -z-0" />
+            
+            
+            
+            <div className="relative z-10 w-full max-w-5xl mx-auto px-4 pt-6 pb-6 sm:pt-10 sm:pb-10 text-center">
+
+                <div className="flex items-center justify-center gap-2 mb-4">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-900" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-200" />
+                </div>
+
+                <h1 className="w-full text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 font-[var(--font-montserrat)] leading-tight sm:leading-none">
+                    Standardul Calității în <br className="hidden sm:inline" />
+                    <span className="bg-gradient-to-r from-slate-900 via-gray-700 to-gray-500 bg-clip-text text-transparent font-bold">
+                        Construcții &amp; Finisaje.
+                    </span>
+                </h1>
+
+                <p className="mt-5 sm:mt-7 text-xs sm:text-base md:text-lg text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed tracking-tight">
+                    Conectăm proiectele tale cu meșteri verificați, specializați pe domenii exacte. De la renovări complexe până la lucrări de finisaj de înaltă precizie.
+                </p>
+
+                <div className="mt-8 sm:mt-10 flex items-center justify-center gap-3">
+                    <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-gray-300" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400" />
+                    <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-gray-300" />
+                </div>
+            </div>
+
+            <div className="w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[6px] sm:gap-3 md:gap-4 p-2 sm:p-6 md:p-10 relative z-10">
                 {
                     arrMesteri.map(arrMesteriProfesie => (
                         arrMesteriProfesie.mesteri.map(mester => (
-                            <div key={mester.id} className="border border-gray-800 bg-blue-first  hover:shadow-lg transition-shadow duration-200 h-[210px] sm:h-[300px] md:h-[360px] lg:h-[400px] p-1 ">
+                            <div key={mester.id} className="border border-gray-800 bg-blue-first hover:shadow-lg transition-shadow duration-200 h-[210px] sm:h-[300px] md:h-[360px] lg:h-[400px] p-1 ">
                                 <div className='relative w-full h-full overflow-hidden'>
                                     <Image
                                         src={"/Rectangle 11.png"}
@@ -20,7 +52,7 @@ const Maestri = () => {
                                         sizes="(max-width: 640px) 33vw, (max-width: 1024px) 25vw, 20vw"
                                         className="object-cover"
                                     />
-                                    
+
                                     <div className='absolute bottom-0 left-0 right-0 h-[60%] sm:h-[45%] bg-gradient-to-t from-black/95 via-black/70 to-transparent flex flex-col justify-end p-1.5 sm:p-3 text-white'>
                                         <h2 className='text-[10px] xs:text-xs sm:text-base font-medium leading-tight drop-shadow-md truncate'>
                                             Nume: <span className="font-normal">{mester.nume}</span>
