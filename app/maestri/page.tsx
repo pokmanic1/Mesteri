@@ -6,13 +6,17 @@ const Maestri = () => {
         <section className='w-full min-h-[calc(100dvh-60px)] bg-slate-50 py-6 sm:py-10 relative overflow-hidden'>
 
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none -z-0" />
-      
+
+
+
+
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-gradient-to-b from-[#F59E0B]/10 via-[#EA580C]/35 to-transparent blur-3xl pointer-events-none -z-0" />
             <div className="absolute -top-20 left-1/3 w-[500px] h-[500px] bg-[#F59E0B]/25 rounded-full blur-[120px] pointer-events-none -z-0" />
             <div className="absolute top-1/4 right-10 w-96 h-96 bg-[#EA580C]/10 rounded-full blur-[100px] pointer-events-none -z-0" />
-            
-            
-            
+
+
+
+
             <div className="relative z-10 w-full max-w-5xl mx-auto px-4 pt-6 pb-6 sm:pt-10 sm:pb-10 text-center">
 
                 <div className="flex items-center justify-center gap-2 mb-4">
@@ -20,6 +24,9 @@ const Maestri = () => {
                     <div className="w-1.5 h-1.5 rounded-full bg-slate-400" />
                     <div className="w-1.5 h-1.5 rounded-full bg-slate-200" />
                 </div>
+
+
+
 
                 <h1 className="w-full text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 font-[var(--font-montserrat)] leading-tight sm:leading-none">
                     Standardul Calității în <br className="hidden sm:inline" />
@@ -32,10 +39,14 @@ const Maestri = () => {
                     Conectăm proiectele tale cu meșteri verificați, specializați pe domenii exacte. De la renovări complexe până la lucrări de finisaj de înaltă precizie.
                 </p>
 
-                <div className="mt-8 sm:mt-10 flex items-center justify-center gap-3">
-                    <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-r from-transparent to-gray-300" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400" />
-                    <div className="w-12 sm:w-20 h-[1px] bg-gradient-to-l from-transparent to-gray-300" />
+                <div className="mt-8 sm:mt-10 flex items-center justify-center gap-4">
+                    <div className="w-16 sm:w-28 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-gray-400" />
+                    <div className="flex items-center gap-2 px-1">
+                        <div className="w-5 sm:w-7 h-[2px] rounded-full bg-gradient-to-r from-gray-300 to-gray-500" />
+                        <div className="w-2.5 h-2.5 rounded-full bg-[#F59E0B] shadow-[0_0_8px_rgba(245,158,11,0.5)] ring-2 ring-white/80" />
+                        <div className="w-5 sm:w-7 h-[2px] rounded-full bg-gradient-to-l from-gray-300 to-gray-500" />
+                    </div>
+                    <div className="w-16 sm:w-28 h-[1px] bg-gradient-to-l from-transparent via-gray-300 to-gray-400" />
                 </div>
             </div>
 
