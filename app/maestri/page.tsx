@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Maestri = () => {
     return (
-        <section className='w-full min-h-[calc(100dvh-60px)] bg-slate-50 py-6 sm:py-10 relative overflow-hidden'>
+        <section className='w-full min-h-[calc(100dvh-60px)] bg-slate-100 py-6 sm:py-10 relative overflow-hidden'>
 
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none -z-0" />
 
@@ -19,10 +19,10 @@ const Maestri = () => {
 
             <div className="relative z-10 w-full max-w-5xl mx-auto px-4 pt-6 pb-6 sm:pt-10 sm:pb-10 text-center">
 
-                <div className="flex items-center justify-center gap-2 mb-4">
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-900" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-400" />
-                    <div className="w-1.5 h-1.5 rounded-full bg-slate-200" />
+             <div className="flex items-center justify-center gap-2 mb-4">
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
+                    <div className="w-1.5 h-1.5 rounded-full bg-[#EA580C]" />
                 </div>
 
 
