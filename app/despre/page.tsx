@@ -56,11 +56,11 @@ const DespreNoi = () => {
                         <div className="col-span-12 md:col-span-6 p-6 sm:p-10 border-b md:border-b-0 md:border-r border-slate-200/80 flex justify-center items-center">
                             <div className="relative w-full min-h-[400px] sm:min-h-[480px] rounded-lg overflow-hidden border border-slate-200/80 bg-white/80 backdrop-blur-md">
                                 <Image
-                                    src={''}
+                                    src={'/Despre/GrupMesteriPhoto1.jpg'}
                                     fill
                                     style={{ objectFit: 'cover' }}
                                     alt='Despre noi'
-                                    className="object-cover"
+                                    className="object-fit "
                                 />
                             </div>
                         </div>
