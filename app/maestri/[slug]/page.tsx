@@ -3,28 +3,28 @@ import Image from 'next/image'
 import { arrMesteri } from '@/utility/constants';
 
 export async function generateStaticParams() {
-    return arrMesteri.map((maestru) => ({
-        id: maestru.id.toString(),
+    return arrMesteri.map((mester) => ({
+        slug: mester.slug,
     }))
 }
 
 interface PageProps {
-    params: Promise<{ id: string }>
+    params: Promise<{ slug: string }>
 }
 
-const Maestru = async ({ params }: PageProps) => {
-    const { id } = await params
+const Mester = async ({ params }: PageProps) => {
+    const { slug } = await params
 
-    const maestru = arrMesteri.find((item) => item.id.toString() === id)
+    const mester = arrMesteri.find((item) => item.slug === slug)
 
-    if (!maestru) {
+    if (!mester) {
         return (
             <div className="min-h-screen bg-slate-100 flex flex-col items-center justify-center p-6 text-center text-[#0F172A]">
                 <h2 className="text-2xl font-extrabold font-[var(--font-montserrat)] uppercase">
-                    Maestrul nu a fost găsit
+                    Meșterul nu a fost găsit
                 </h2>
                 <p className="text-slate-600 text-sm mt-2">
-                    ID-ul solicitat nu există în sistem.
+                    Profilul solicitat nu există.
                 </p>
             </div>
         )
@@ -43,19 +43,19 @@ const Maestru = async ({ params }: PageProps) => {
                 
                 {/* Header Profile Section */}
                 <div className="border-y border-slate-200/80 p-8 sm:p-14 text-center flex flex-col justify-center items-center bg-white/30 backdrop-blur-sm">
-                    {/* Nume Maestru */}
+                    {/* Nume Meșter */}
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase font-[var(--font-montserrat)] leading-[1.08] text-[#0F172A] max-w-3xl">
-                        {maestru.nume}
+                        {mester.nume}
                     </h1>
 
                     {/* Profesia / Categoria (sub nume) */}
                     <span className="mt-3 inline-block text-sm sm:text-base font-bold font-mono text-[#EA580C] uppercase tracking-widest">
-                        — {maestru.categorie} —
+                        — {mester.categorie} —
                     </span>
 
                     {/* Descriere */}
                     <p className="mt-6 text-xs sm:text-sm md:text-base text-slate-600 font-normal max-w-2xl leading-relaxed tracking-tight">
-                        {maestru.descriere}
+                        {mester.descriere}
                     </p>
                 </div>
 
@@ -65,24 +65,24 @@ const Maestru = async ({ params }: PageProps) => {
                     <div className="p-6 border-b sm:border-b-0 sm:border-r border-slate-200/80 bg-white/50 backdrop-blur-md flex flex-col justify-center">
                         <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase">ORAȘ</span>
                         <p className="text-lg sm:text-xl font-bold font-[var(--font-montserrat)] text-[#0F172A] mt-1">
-                            {maestru.oras}
+                            {mester.oras}
                         </p>
                     </div>
 
                     <div className="p-6 border-b sm:border-b-0 sm:border-r border-slate-200/80 bg-white/50 backdrop-blur-md flex flex-col justify-center">
                         <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase">EXPERIENȚĂ</span>
                         <p className="text-lg sm:text-xl font-bold font-[var(--font-montserrat)] text-[#0F172A] mt-1">
-                            {maestru.experienta}
+                            {mester.experienta}
                         </p>
                     </div>
 
                     <div className="p-6 bg-white/50 backdrop-blur-md flex flex-col justify-center">
                         <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase">TELEFON</span>
                         <a 
-                            href={`tel:${maestru.telefon}`}
+                            href={`tel:${mester.telefon}`}
                             className="text-lg sm:text-xl font-bold font-[var(--font-montserrat)] text-[#EA580C] hover:underline mt-1"
                         >
-                            {maestru.telefon}
+                            {mester.telefon}
                         </a>
                     </div>
 
@@ -91,7 +91,7 @@ const Maestru = async ({ params }: PageProps) => {
 
             <div className="relative z-10 w-[90%] max-w-[1200px] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {maestru.portofoliu.map((item) => (
+                    {mester.portofoliu.map((item) => (
                         <div 
                             key={item}
                             className="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-slate-200/80 bg-white/60 backdrop-blur-md shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-1 flex items-center justify-center group">
@@ -113,4 +113,4 @@ const Maestru = async ({ params }: PageProps) => {
     )
 }
 
-export default Maestru
+export default Mester
