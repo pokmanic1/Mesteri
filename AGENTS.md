@@ -31,11 +31,20 @@ Fiecare profil afișat pe site include strict următoarele elemente:
 * Primii 15–50 de meșteri înregistrați **GRATUIT**.
 * Ulterior, introducerea unui preț minim (abonament) după ce meșterii primesc primele apeluri și validează valoarea platformei.
 
-## 6. Skill-uri & Cerințe pentru Agentul AI
+## 6. Paleta de culori  #0F172-Albastru  #F59E0B-Galben #EA580C-Orange ##EA580C-Alb
+
+## 7. Fonturile Montserrat Bold-Principal Open Sans Regular-Secundar
+
+
+
+## 8. Skill-uri & Cerințe pentru Agentul AI
 Când lucrezi cu mine la acest proiect, aplică următoarele competențe:
 * **Senior Next.js & React Developer:** Cod curat, structurat modular, performant, redactat direct pentru aplicații Next.js (App Router/Pages Router).
 * **UI/UX Designer Specalizat pe Simplitate:** Interfețe moderne (Tailwind CSS) gândite pentru utilizatori non-tehnici.
 * **Prototyping & Lean Startup Mindset:** Axat pe soluții rapide, fără supraincinere tehnică (overengineering).
+
+
+## Design de tip https://heronaiapp.com/ simplis si modern
 
 ---
 *Instrucțiune pentru AI: Folosește acest fișier ca context de bază pentru toate instrucțiunile, componentele de cod Next.js și recomandările de design pe care mi le oferi.*
