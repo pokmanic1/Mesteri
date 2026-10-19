@@ -4,6 +4,18 @@ import Link from 'next/link';
 import { OrangeButon } from '@/components/Buton';
 import { arrMesteri } from '@/utility/constants';
 import FilterCategorii from '@/components/mesteriComponents/FilterCategorii';
+const label = "text-[10px] font-mono tracking-widest text-slate-400 uppercase";
+const titlu =
+  "font-extrabold tracking-tight uppercase font-[var(--font-montserrat)] leading-[1.08] text-[#0F172A]";
+const frame = "relative z-10 w-full max-w-7xl mx-auto px-4 border-x border-slate-200/80";
+
+// Model fix de patrate (fara random, ca sa nu apara erori de hidratare)
+const patrate = [
+  "border border-slate-300", "bg-slate-300/60", "border border-slate-300", "bg-[#EA580C] animate-pulse",
+  "bg-slate-300/60", "bg-[#0F172A]", "border border-slate-300", "bg-slate-300/60",
+  "border border-slate-300", "border border-slate-300", "bg-[#F59E0B] animate-pulse", "bg-slate-300/60",
+];
+
 const Mesteri = () => {
   return (
     <section className='w-full min-h-[calc(100dvh-60px)] bg-slate-100 py-6 sm:py-10 relative overflow-hidden'>
@@ -20,43 +32,48 @@ const Mesteri = () => {
 
 
 
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-4 pt-6 pb-6 sm:pt-10 sm:pb-10 text-center">
-
-        <div className="flex items-center justify-center gap-2 mb-4">
-          <div className="w-1.5 h-1.5 rounded-full bg-[#0F172A]" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#F59E0B]" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#EA580C]" />
-        </div>
-
-
-
-
-        <h1 className="w-full text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-slate-900 font-[var(--font-montserrat)] leading-tight sm:leading-none">
-          Standardul Calității în <br className="hidden sm:inline" />
-          <span className="bg-gradient-to-r from-slate-900 via-gray-700 to-gray-500 bg-clip-text text-transparent font-bold">
-            Construcții &amp; Finisaje.
-          </span>
-        </h1>
-
-        <p className="mt-5 sm:mt-7 text-xs sm:text-base md:text-lg text-slate-600 font-normal max-w-2xl mx-auto leading-relaxed tracking-tight">
-          Conectăm proiectele tale cu meșteri verificați, specializați pe domenii exacte. De la renovări complexe până la lucrări de finisaj de înaltă precizie.
-        </p>
-
-        <div className="mt-8 sm:mt-10 flex items-center justify-center gap-4">
-          <div className="w-16 sm:w-28 h-[1px] bg-gradient-to-r from-transparent via-gray-300 to-gray-400" />
-          <div className="flex items-center gap-2 px-1">
-            <div className="w-5 sm:w-7 h-[2px] rounded-full bg-gradient-to-r from-gray-300 to-gray-500" />
-            <div className="w-2.5 h-2.5 rounded-full bg-[#F59E0B] shadow-[0_0_8px_rgba(245,158,11,0.5)] ring-2 ring-white/80" />
-            <div className="w-5 sm:w-7 h-[2px] rounded-full bg-gradient-to-l from-gray-300 to-gray-500" />
+      <div className={frame}>
+        <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80">
+          {/* Stanga: patratul portocaliu */}
+          <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 relative">
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-mono py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+              Apel direct
+            </div>
           </div>
-          <div className="w-16 sm:w-28 h-[1px] bg-gradient-to-l from-transparent via-gray-300 to-gray-400" />
+
+          {/* Centru: totul pe mijloc */}
+          <div className="col-span-12 md:col-span-8 p-8 sm:p-14 md:border-r border-slate-200/80 flex flex-col items-center justify-center text-center min-h-[300px] sm:min-h-[380px]">
+            <span className={label}>Meșteri</span>
+            <h1 className={`${titlu} mt-5 text-3xl sm:text-5xl md:text-6xl max-w-3xl`}>
+              Găsește meșterul potrivit
+            </h1>
+            <p className="mt-6 text-xs sm:text-sm md:text-base text-slate-600 leading-relaxed tracking-tight max-w-xl">
+              Alege categoria, vezi meșterii din orașul tău și sună-i direct. Fără intermediari
+              și fără comision.
+            </p>
+            <div className="mt-8">
+              <OrangeButon link="#lista" continut="Vezi meșterii" />
+            </div>
+          </div>
+
+          {/* Dreapta: eticheta + cateva patrate */}
+          <div className="hidden md:flex md:col-span-2 p-4 flex-col justify-between">
+            <span className={label}>Gratuit la start</span>
+            <div className="grid grid-cols-4 gap-1.5" aria-hidden="true">
+              {patrate.map((c, i) => (
+                <div
+                  key={i}
+                  className={`aspect-square ${c}`}
+                  style={{ animationDelay: `${i * 0.15}s` }}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
+<FilterCategorii/>
 
-        <FilterCategorii/>
-
-
-      <div className="w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[6px] sm:gap-3 md:gap-4 p-2 sm:p-6 md:p-10 relative z-10">
+      <div id="lista" className="w-full scroll-mt-20 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[6px] sm:gap-3 md:gap-4 p-2 sm:p-6 md:p-10 relative z-10">
         {
           arrMesteri.map(mester => (
             <div key={mester.id} className="border border-gray-800 bg-blue-first hover:shadow-lg transition-shadow duration-200 h-[210px] sm:h-[300px] md:h-[360px] lg:h-[400px] p-1 ">
@@ -82,7 +99,7 @@ const Mesteri = () => {
                   <p className='text-[9px] xs:text-[10px] sm:text-xs font-light text-gray-200 drop-shadow-md truncate'>
                     Exp: <span className="font-normal">{mester.experienta}</span>
                   </p>
-                  <Link href={`/maestri/${mester.slug}`} className='bg-orange-first text-[10px] sm:text-xs px-3 py-0.5 rounded text-white inline-block mt-1 self-start transition-transform duration-200 hover:scale-105 hover:opacity-80'>Descopera</Link>
+                  <Link href={`/mesteri/${mester.slug}`} className='bg-orange-first text-[10px] sm:text-xs px-3 py-0.5 rounded text-white inline-block mt-1 self-start transition-transform duration-200 hover:scale-105 hover:opacity-80'>Descopera</Link>
 
 
 
@@ -97,4 +114,4 @@ const Mesteri = () => {
 };
 
 
-export default Mesteri;
+export default Mesteri; 

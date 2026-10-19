@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { arrMesteri } from '@/utility/constants';
-const FilterCategorii = () => {
+const FilterCategorii = (props:any) => {
   const [categorie, setCategorie] = useState('Toate Categoriile');
   const [inputDeschis, setInuputDeschis] = useState(false);
 
