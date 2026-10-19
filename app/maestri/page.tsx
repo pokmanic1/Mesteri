@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { OrangeButon } from '@/components/Buton';
 import { arrMesteri } from '@/utility/constants';
+import FilterCategorii from '@/components/mesteriComponents/FilterCategorii';
 const Mesteri = () => {
   return (
     <section className='w-full min-h-[calc(100dvh-60px)] bg-slate-100 py-6 sm:py-10 relative overflow-hidden'>
@@ -52,40 +53,7 @@ const Mesteri = () => {
         </div>
       </div>
 
-      <div className='w-full px-2 sm:px-6 md:px-10'>
-        <div className="w-48 xs:w-56 sm:w-64 my-2 sm:my-4 relative group">
-          <details className="relative">
-
-            <summary className="list-none flex items-center justify-between w-full px-3 sm:px-4 py-1.5 sm:py-2.5 text-[11px] sm:text-xs font-semibold bg-[#0F172A] text-[#F8FAFC] rounded-full border sm:border-2 border-[#EA580C] shadow-sm cursor-pointer select-none focus:outline-none focus:ring-1 focus:ring-[#F59E0B] transition-all active:scale-[0.98]">
-              <span className="truncate pr-1.5">Toate Categoriile</span>
-              <div className="flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#EA580C] text-white shrink-0">
-                <svg className="w-2.5 h-2.5 sm:w-3 sm:h-3 transition-transform duration-200 group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-            </summary>
-
-            <div className="absolute top-full left-0 w-full mt-1 p-1 sm:p-1.5 bg-[#0F172A] border sm:border-2 border-[#EA580C]/40 rounded-xl sm:rounded-2xl shadow-lg z-50 backdrop-blur-md overflow-hidden flex flex-col gap-0.5">
-              <button type="button" className="w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium text-white hover:bg-[#EA580C] active:bg-[#EA580C] rounded-lg transition-colors truncate">
-                Toate Categoriile
-              </button>
-              <button type="button" className="w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium text-slate-200 hover:bg-[#EA580C] active:bg-[#EA580C] rounded-lg transition-colors truncate">
-                Electricieni
-              </button>
-              <button type="button" className="w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium text-slate-200 hover:bg-[#EA580C] active:bg-[#EA580C] rounded-lg transition-colors truncate">
-                Ingineri
-              </button>
-              <button type="button" className="w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium text-slate-200 hover:bg-[#EA580C] active:bg-[#EA580C] rounded-lg transition-colors truncate">
-                Instalatori
-              </button>
-              <button type="button" className="w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium text-slate-200 hover:bg-[#EA580C] active:bg-[#EA580C] rounded-lg transition-colors truncate">
-                Zugravi / Finisaje
-              </button>
-            </div>
-
-          </details>
-        </div>
-      </div>
+        <FilterCategorii/>
 
 
       <div className="w-full grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[6px] sm:gap-3 md:gap-4 p-2 sm:p-6 md:p-10 relative z-10">

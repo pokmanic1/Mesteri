@@ -28,7 +28,7 @@ const Navbar = () => {
 
                 <div className="pages text-center text-black hidden md:flex items-center justify-center   md:gap-[25px] lg:gap-[30px] font-serif-playfair">
                     <Link href='/maestri'>Maestri</Link>
-                    <Link href='/programari'>Servicii</Link>
+                    <Link href='/servicii'>Servicii</Link>
                     <Link href='/despre'>Despre noi</Link>
                 </div>
 
@@ -39,7 +39,7 @@ const Navbar = () => {
                 </button>
                 <div className={`absolute  top-14 right-0 z-50 flex flex-col w-56 font-serif-playfair text-sm md:hidden text-black bg-[#F8FAFC] p-5 rounded-2xl shadow-xl border border-gray-400 gap-4 ${burger ? 'flex' : 'hidden'}`}>
                     <Link className=' border-b border-gray-400' href='/maestri'>Maestri</Link>
-                    <Link className=' border-b border-gray-400' href='/programari' >Servicii</Link>
+                    <Link className=' border-b border-gray-400' href='/servicii' >Servicii</Link>
                     <Link className=' border-b border-gray-400' href='/despre' >Despre noi</Link>
                 </div>
             </nav>
