@@ -1,9 +1,11 @@
 'use client';
 import { useState } from 'react';
-
+import { arrMesteri } from '@/utility/constants';
 const FilterCategorii = () => {
   const [categorie, setCategorie] = useState('Toate Categoriile');
   const [inputDeschis, setInuputDeschis] = useState(false);
+
+  const arrMesteriFiltrat=arrMesteri.filter(mester=>mester.categorie===categorie)
 
   const handleCategorie = (categorie1: any) => {
     setCategorie(categorie1);
@@ -24,7 +26,7 @@ const FilterCategorii = () => {
       <div className="w-48 xs:w-56 sm:w-64 my-2 sm:my-4 relative group">
         <div className="relative">
 
-          <button 
+          <button   
             type="button"
             onClick={() => setInuputDeschis((p) => !p)} 
             className="list-none flex items-center justify-between w-full px-3 sm:px-4 py-1.5 sm:py-2.5 text-[11px] sm:text-xs font-semibold bg-[#0F172A] text-[#F8FAFC] rounded-full border sm:border-2 border-[#EA580C] shadow-sm cursor-pointer select-none focus:outline-none focus:ring-1 focus:ring-[#F59E0B] transition-all duration-300 hover:border-[#F59E0B] hover:shadow-md hover:shadow-[#EA580C]/20 active:scale-[0.98]"
