@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { OrangeButon, WhiteButon } from "@/components/Buton";
-import { arrMesteri } from "@/utility/constants";
 
 const categorii = [
   { nr: "01", nume: "Electricieni", text: "Prize, tablouri, iluminat, defecțiuni" },
@@ -13,12 +12,6 @@ const pasi = [
   { nr: "01", titlu: "Alegi categoria", text: "Electrician, instalator, zugrav sau inginer." },
   { nr: "02", titlu: "Vezi meșterul", text: "Lucrări reale și ani de experiență, clar afișate." },
   { nr: "03", titlu: "Suni direct", text: "Un singur click. Fără intermediari, fără comision." },
-];
-
-const cifre = [
-  { val: String(arrMesteri.length), label: "Meșteri" },
-  { val: "4", label: "Categorii" },
-  { val: "0 lei", label: "Comision" },
 ];
 
 const label = "text-[10px] font-mono tracking-widest text-slate-400 uppercase";
@@ -48,7 +41,7 @@ export default function Home() {
                 Fără intermediari, fără comisioane, din orașul tău.
               </p>
               <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <OrangeButon link="/maestri" continut="Vezi meșterii" />
+                <OrangeButon link="/mesteri" continut="Vezi meșterii" />
                 <WhiteButon link="/servicii" continut="Servicii" />
               </div>
             </div>
@@ -77,7 +70,7 @@ export default function Home() {
               {categorii.map((c, i) => (
                 <Link
                   key={c.nr}
-                  href="/maestri"
+                  href="/mesteri"
                   className={`group p-8 sm:p-10 border-slate-200/80 transition-colors hover:bg-[#0F172A] ${
                     i % 2 === 0 ? "sm:border-r" : ""
                   } ${i < 2 ? "border-b" : i === 2 ? "border-b sm:border-b-0" : ""}`}

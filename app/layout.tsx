@@ -17,8 +17,19 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Titlul Aplicației Tale",
-  description: "Descrierea aplicației tale",
+  title: {
+    default: "Meșteri – găsește un meșter în orașul tău",
+    template: "%s | Meșteri",
+  },
+  description:
+    "Găsește electricieni, instalatori, zugravi și ingineri din orașul tău și sună-i direct. Fără intermediari, fără comision.",
+  openGraph: {
+    title: "Meșteri – găsește un meșter în orașul tău",
+    description:
+      "Alegi categoria, vezi lucrările și suni direct. Fără intermediari, fără comision.",
+    locale: "ro_RO",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -34,8 +45,8 @@ export default function RootLayout({
       <body className="font-sans min-h-full flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>
-        <Footer/>
+        <Footer />
       </body>
-    </html> 
+    </html>
   );
 }
