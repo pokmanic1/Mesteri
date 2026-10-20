@@ -21,8 +21,8 @@ const patrate = [
   "border border-slate-300", "border border-slate-300", "bg-[#F59E0B] animate-pulse", "bg-slate-300/60",
 ];
 
-const label = "text-[10px] font-mono tracking-widest text-slate-400 uppercase";
-const titlu = "font-extrabold tracking-tight uppercase font-[var(--font-montserrat)] leading-[1.08] text-[#0F172A]";
+const label = "text-[10px] font-sans tracking-widest text-slate-400 uppercase";
+const titlu = "font-bold tracking-tight uppercase font-heading leading-[1.08] text-[#0F172A]";
 const frame = "relative z-10 w-full max-w-7xl mx-auto px-4 border-x border-slate-200/80";
 
 export default function Home() {
@@ -38,7 +38,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80">
             {/* Stanga: patratul portocaliu */}
             <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 relative">
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-mono py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
                 Meșteri locali
               </div>
             </div>
@@ -93,8 +93,8 @@ export default function Home() {
                     i % 2 === 0 ? "sm:border-r" : ""
                   } ${i < 2 ? "border-b" : i === 2 ? "border-b sm:border-b-0" : ""}`}
                 >
-                  <span className="font-mono text-xs tracking-widest text-[#EA580C]">{c.nr}</span>
-                  <h3 className="mt-3 text-lg font-bold uppercase tracking-wide font-[var(--font-montserrat)] text-[#0F172A] group-hover:text-white transition-colors">
+                  <span className="font-sans text-xs tracking-widest text-[#EA580C]">{c.nr}</span>
+                  <h3 className="mt-3 text-lg font-bold uppercase tracking-wide font-heading text-[#0F172A] group-hover:text-white transition-colors">
                     {c.nume}
                   </h3>
                   <p className="mt-2 text-xs sm:text-sm text-slate-600 group-hover:text-slate-300 transition-colors">
@@ -118,10 +118,10 @@ export default function Home() {
                   i < pasi.length - 1 ? "border-b md:border-b-0 md:border-r" : ""
                 }`}
               >
-                <div className="text-5xl sm:text-6xl font-extrabold font-[var(--font-montserrat)] text-[#F59E0B]">
+                <div className="text-5xl sm:text-6xl font-bold font-heading text-[#F59E0B]">
                   {p.nr}
                 </div>
-                <h3 className="mt-6 text-lg font-bold uppercase tracking-wide font-[var(--font-montserrat)] text-[#0F172A]">
+                <h3 className="mt-6 text-lg font-bold uppercase tracking-wide font-heading text-[#0F172A]">
                   {p.titlu}
                 </h3>
                 <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">{p.text}</p>

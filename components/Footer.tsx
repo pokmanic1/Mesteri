@@ -9,7 +9,7 @@ export default function Footer() {
         <footer className="bg-[#0F172A] text-slate-300 min-w-[375px]">
             <div className="max-w-7xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-3">
                 <div>
-                    <p className="font-[var(--font-montserrat)] font-bold uppercase text-white text-lg">
+                    <p className="font-heading font-bold uppercase text-white text-lg">
                         Meșteri
                     </p>
                     <p className="mt-3 text-sm text-slate-400 max-w-xs">
@@ -24,7 +24,7 @@ export default function Footer() {
                 </nav>
 
                 <div>
-                    <p className="font-[var(--font-montserrat)] font-bold uppercase text-[#F59E0B] text-sm">
+                    <p className="font-heading font-bold uppercase text-[#F59E0B] text-sm">
                         Ești meșter?
                     </p>
                     <p className="mt-2 text-sm text-slate-400">

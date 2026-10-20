@@ -17,13 +17,13 @@ const DespreNoi = () => {
                     <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80 relative  ">
 
                         <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 p-4 relative">
-                            <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase sticky top-24">
+                            <span className="text-[10px] font-sans tracking-widest text-slate-400 uppercase sticky top-24">
                                 OBOSIT DE PIERDUT ZILE PENTRU CAUTAT?
                             </span>
                         </div>
 
                         <div className="col-span-12 md:col-span-8 p-8 sm:p-16 text-center border-r border-slate-200/80 flex flex-col justify-center items-center">
-                            <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase font-[var(--font-montserrat)] leading-[1.08] text-[#0F172A] max-w-3xl">
+                            <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight uppercase font-heading leading-[1.08] text-[#0F172A] max-w-3xl">
                                 SUNTEM CONSTRUCTORII CARE CREAZĂ PLATFORMA PE CARE NE-AM DORIT-O MEREU
                             </h1>
                             <p className="mt-8 text-xs sm:text-sm md:text-base text-slate-600 font-normal max-w-xl leading-relaxed tracking-tight">
@@ -32,10 +32,10 @@ const DespreNoi = () => {
                         </div>
 
                         <div className="hidden md:block md:col-span-2 p-4 relative">
-                            <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase sticky top-24">
+                            <span className="text-[10px] font-sans tracking-widest text-slate-400 uppercase sticky top-24">
                                 WE BUILT THE FIX
                             </span>
-                            <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-mono py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+                            <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
                                 STANDARDE PRO
                             </div>
                         </div>
@@ -67,12 +67,12 @@ const DespreNoi = () => {
 
                         <div className="col-span-12 md:col-span-6 p-8 sm:p-12 relative flex flex-col justify-center">
 
-                            <div className="hidden md:flex absolute right-4 sm:right-8 md:right-12 top-3 -translate-y-1/2 bg-[#EA580C] text-white text-[6px] sm:text-[8px] md:text-[10px] font-bold font-mono py-2 sm:py-3 md:py-4 lg:py-6 px-1.5  uppercase tracking-widest">
+                            <div className="hidden md:flex absolute right-4 sm:right-8 md:right-12 top-3 -translate-y-1/2 bg-[#EA580C] text-white text-[6px] sm:text-[8px] md:text-[10px] font-bold font-sans py-2 sm:py-3 md:py-4 lg:py-6 px-1.5  uppercase tracking-widest">
                                 STANDARDE PRO
                             </div>
 
 
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight uppercase font-[var(--font-montserrat)] leading-[1.08] text-[#0F172A] mb-6 pr-6">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight uppercase font-heading leading-[1.08] text-[#0F172A] mb-6 pr-6">
                                 Despre noi
                             </h2>
 
@@ -106,7 +106,7 @@ const DespreNoi = () => {
                     <div className="info-card group rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-md p-6 text-[#0F172A] shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-0.5">
                         <div className="flex items-center gap-3">
                             <div className="w-2 h-2 rounded-full bg-[#EA580C]" />
-                            <h3 className="text-lg font-bold tracking-wide font-[var(--font-montserrat)] text-[#0F172A]">Adresă</h3>
+                            <h3 className="text-lg font-bold tracking-wide font-heading text-[#0F172A]">Adresă</h3>
                         </div>
                         <p className="mt-2 text-sm text-slate-700 font-medium">Strada X, nr. 12</p>
                         <p className="text-xs text-slate-500 mt-0.5">Republica Moldova, Cahul</p>
@@ -116,7 +116,7 @@ const DespreNoi = () => {
                     <div className="info-card group rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-md p-6 text-[#0F172A] shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-0.5">
                         <div className="flex items-center gap-3">
                             <div className="w-2 h-2 rounded-full bg-[#F59E0B]" />
-                            <h3 className="text-lg font-bold tracking-wide font-[var(--font-montserrat)] text-[#0F172A]">Social Media &amp; Email</h3>
+                            <h3 className="text-lg font-bold tracking-wide font-heading text-[#0F172A]">Social Media &amp; Email</h3>
                         </div>
                         <p className="mt-2 text-sm text-slate-700 font-medium">abcd@gmail.com</p>
                         <p className="text-xs text-slate-500 mt-0.5">Facebook • Instagram • LinkedIn</p>
@@ -126,7 +126,7 @@ const DespreNoi = () => {
                     <div className="info-card group rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-md p-6 text-[#0F172A] shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-0.5">
                         <div className="flex items-center gap-3">
                             <div className="w-2 h-2 rounded-full bg-[#0F172A]" />
-                            <h3 className="text-lg font-bold tracking-wide font-[var(--font-montserrat)] text-[#0F172A]">Telefon &amp; Program</h3>
+                            <h3 className="text-lg font-bold tracking-wide font-heading text-[#0F172A]">Telefon &amp; Program</h3>
                         </div>
                         <p className="mt-2 text-sm text-slate-700 font-medium">+373 123 456 789</p>
                         <p className="text-xs text-slate-500 mt-0.5">Luni - Duminică: 08:00 - 17:00</p>

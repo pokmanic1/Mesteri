@@ -20,7 +20,7 @@ const Mester = async ({ params }: PageProps) => {
     if (!mester) {
         return (
             <div className="min-h-screen bg-slate-100 flex flex-col items-center justify-center p-6 text-center text-[#0F172A]">
-                <h2 className="text-2xl font-extrabold font-[var(--font-montserrat)] uppercase">
+                <h2 className="text-2xl font-bold font-heading uppercase">
                     Meșterul nu a fost găsit
                 </h2>
                 <p className="text-slate-600 text-sm mt-2">
@@ -44,12 +44,12 @@ const Mester = async ({ params }: PageProps) => {
                 {/* Header Profile Section */}
                 <div className="border-y border-slate-200/80 p-8 sm:p-14 text-center flex flex-col justify-center items-center bg-white/30 backdrop-blur-sm">
                     {/* Nume Meșter */}
-                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight uppercase font-[var(--font-montserrat)] leading-[1.08] text-[#0F172A] max-w-3xl">
+                    <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight uppercase font-heading leading-[1.08] text-[#0F172A] max-w-3xl">
                         {mester.nume}
                     </h1>
 
                     {/* Profesia / Categoria (sub nume) */}
-                    <span className="mt-3 inline-block text-sm sm:text-base font-bold font-mono text-[#EA580C] uppercase tracking-widest">
+                    <span className="mt-3 inline-block text-sm sm:text-base font-bold font-sans text-[#EA580C] uppercase tracking-widest">
                         — {mester.categorie} —
                     </span>
 
@@ -63,24 +63,24 @@ const Mester = async ({ params }: PageProps) => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 border-b border-slate-200/80">
                     
                     <div className="p-6 border-b sm:border-b-0 sm:border-r border-slate-200/80 bg-white/50 backdrop-blur-md flex flex-col justify-center">
-                        <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase">ORAȘ</span>
-                        <p className="text-lg sm:text-xl font-bold font-[var(--font-montserrat)] text-[#0F172A] mt-1">
+                        <span className="text-[10px] font-sans tracking-widest text-slate-400 uppercase">ORAȘ</span>
+                        <p className="text-lg sm:text-xl font-bold font-heading text-[#0F172A] mt-1">
                             {mester.oras}
                         </p>
                     </div>
 
                     <div className="p-6 border-b sm:border-b-0 sm:border-r border-slate-200/80 bg-white/50 backdrop-blur-md flex flex-col justify-center">
-                        <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase">EXPERIENȚĂ</span>
-                        <p className="text-lg sm:text-xl font-bold font-[var(--font-montserrat)] text-[#0F172A] mt-1">
+                        <span className="text-[10px] font-sans tracking-widest text-slate-400 uppercase">EXPERIENȚĂ</span>
+                        <p className="text-lg sm:text-xl font-bold font-heading text-[#0F172A] mt-1">
                             {mester.experienta}
                         </p>
                     </div>
 
                     <div className="p-6 bg-white/50 backdrop-blur-md flex flex-col justify-center">
-                        <span className="text-[10px] font-mono tracking-widest text-slate-400 uppercase">TELEFON</span>
+                        <span className="text-[10px] font-sans tracking-widest text-slate-400 uppercase">TELEFON</span>
                         <a 
                             href={`tel:${mester.telefon}`}
-                            className="text-lg sm:text-xl font-bold font-[var(--font-montserrat)] text-[#EA580C] hover:underline mt-1"
+                            className="text-lg sm:text-xl font-bold font-heading text-[#EA580C] hover:underline mt-1"
                         >
                             {mester.telefon}
                         </a>
@@ -100,7 +100,7 @@ const Mester = async ({ params }: PageProps) => {
                                 <svg className="w-8 h-8 stroke-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                 </svg>
-                                <span className="text-xs font-mono tracking-wider uppercase text-slate-400">
+                                <span className="text-xs font-sans tracking-wider uppercase text-slate-400">
                                     Imagine lucrare
                                 </span>
                             </div>

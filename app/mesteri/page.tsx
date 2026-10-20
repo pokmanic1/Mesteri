@@ -7,9 +7,9 @@ import { OrangeButon } from '@/components/Buton';
 import { arrMesteri } from '@/utility/constants';
 import FilterCategorii from '@/components/mesteriComponents/FilterCategorii';
 
-const label = "text-[10px] font-mono tracking-widest text-slate-400 uppercase";
+const label = "text-[10px] font-sans tracking-widest text-slate-400 uppercase";
 const titlu =
-  "font-extrabold tracking-tight uppercase font-[var(--font-montserrat)] leading-[1.08] text-[#0F172A]";
+  "font-bold tracking-tight uppercase font-heading leading-[1.08] text-[#0F172A]";
 const frame = "relative z-10 w-full max-w-7xl mx-auto px-4 border-x border-slate-200/80";
 
 const patrate = [
@@ -45,7 +45,7 @@ const Mesteri = () => {
       <div className={frame}>
         <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80">
           <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 relative">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-mono py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
               Apel direct
             </div>
           </div>
