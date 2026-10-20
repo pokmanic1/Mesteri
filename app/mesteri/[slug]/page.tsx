@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import { arrMesteri } from '@/utility/constants';
 
 export async function generateStaticParams() {

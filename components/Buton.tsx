@@ -6,7 +6,9 @@ import { motion } from 'framer-motion';
 
 const MotionLink = motion(Link);
 
-const BlueButon = (props: any) => {
+type ButonProps = { link: string; continut: React.ReactNode };
+
+const BlueButon = (props: ButonProps) => {
     return (
         <MotionLink
             href={props.link}
@@ -20,7 +22,7 @@ const BlueButon = (props: any) => {
         </MotionLink>
     );
 };
-const OrangeButon = (props: any) => {
+const OrangeButon = (props: ButonProps) => {
     return (
         <MotionLink
             href={props.link}
@@ -34,7 +36,7 @@ const OrangeButon = (props: any) => {
         </MotionLink>
     );
 };
-const WhiteButon = (props: any) => {
+const WhiteButon = (props: ButonProps) => {
     return (
         <MotionLink
             href={props.link}

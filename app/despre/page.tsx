@@ -27,7 +27,7 @@ const DespreNoi = () => {
                                 SUNTEM CONSTRUCTORII CARE CREAZĂ PLATFORMA PE CARE NE-AM DORIT-O MEREU
                             </h1>
                             <p className="mt-8 text-xs sm:text-sm md:text-base text-slate-600 font-normal max-w-xl leading-relaxed tracking-tight">
-                                Simplificăm procesul complicat și manual al căutării meșterilor verificați. Oferim mai mult timp pentru proiectare și execuție de calitate, eliminând munca inutilă.
+                                Căutarea unui meșter bun nu trebuie să dureze zile întregi. Aici găsești meșterii din zona ta, vezi lucrările lor și îi suni direct.
                             </p>
                         </div>
 
@@ -77,7 +77,15 @@ const DespreNoi = () => {
                             </h2>
 
                             <p className="text-xs sm:text-sm md:text-base text-slate-600 font-normal leading-relaxed tracking-tight pr-6">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto neque est impedit consequuntur odit amet eaque enim fuga eius rerum debitis quia veritatis, numquam suscipit temporibus magni ex tenetur error, quis similique, minima soluta reiciendis. Officia alias tempore, ipsum, ipsam quo adipisci ducimus dolorem natus voluptas exercitationem expedita. Recusandae, quod.
+                                Această platformă este un catalog de meșteri din zona Cahul: electricieni, instalatori,
+                                zugravi și ingineri. Fiecare meșter are un profil cu orașul, specializarea, anii de
+                                experiență, poze cu lucrările făcute și numărul de telefon.
+                            </p>
+
+                            <p className="mt-4 text-xs sm:text-sm md:text-base text-slate-600 font-normal leading-relaxed tracking-tight pr-6">
+                                Scopul nostru este simplu: să rezolvi rapid o problemă din casă, fără timp pierdut cu
+                                căutatul. Alegi categoria, vezi lucrările și suni meșterul direct, cu un singur click.
+                                Fără intermediari și fără comision.
                             </p>
                         </div>
 
