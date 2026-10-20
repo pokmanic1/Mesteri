@@ -13,9 +13,9 @@ const titlu =
 const frame = "relative z-10 w-full max-w-7xl mx-auto px-4 border-x border-slate-200/80";
 
 const patrate = [
-  "border border-slate-300", "bg-slate-300/60", "border border-slate-300", "bg-[#EA580C] animate-pulse",
-  "bg-slate-300/60", "bg-[#0F172A]", "border border-slate-300", "bg-slate-300/60",
-  "border border-slate-300", "border border-slate-300", "bg-[#F59E0B] animate-pulse", "bg-slate-300/60",
+  "border border-slate-300", "bg-slate-300/60", "border border-slate-300", "bg-orange-first animate-pulse",
+  "bg-slate-300/60", "bg-blue-first", "border border-slate-300", "bg-slate-300/60",
+  "border border-slate-300", "border border-slate-300", "bg-yellow-first animate-pulse", "bg-slate-300/60",
 ];
 
 const Mesteri = () => {
@@ -45,12 +45,12 @@ const Mesteri = () => {
       <div className={frame}>
         <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80">
           <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 relative">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-first text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
               Apel direct
             </div>
           </div>
 
-          <div className="col-span-12 md:col-span-8 p-8 sm:p-14 md:border-r border-slate-200/80 flex flex-col items-center justify-center text-center min-h-[300px] sm:min-h-[380px]">
+          <div className="col-span-12 md:col-span-8 p-8 sm:p-14 md:border-r border-slate-200/80 col-center text-center min-h-[300px] sm:min-h-[380px]">
             <span className={label}>Meșteri</span>
             <h1 className={`${titlu} mt-5 text-3xl sm:text-5xl md:text-6xl max-w-3xl`}>
               Găsește meșterul potrivit

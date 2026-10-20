@@ -16,9 +16,9 @@ const pasi = [
 
 // Model fix de patrate (fara random, ca sa nu apara erori de hidratare)
 const patrate = [
-  "border border-slate-300", "bg-slate-300/60", "border border-slate-300", "bg-[#EA580C] animate-pulse",
-  "bg-slate-300/60", "bg-[#0F172A]", "border border-slate-300", "bg-slate-300/60",
-  "border border-slate-300", "border border-slate-300", "bg-[#F59E0B] animate-pulse", "bg-slate-300/60",
+  "border border-slate-300", "bg-slate-300/60", "border border-slate-300", "bg-orange-first animate-pulse",
+  "bg-slate-300/60", "bg-blue-first", "border border-slate-300", "bg-slate-300/60",
+  "border border-slate-300", "border border-slate-300", "bg-yellow-first animate-pulse", "bg-slate-300/60",
 ];
 
 const label = "text-[10px] font-sans tracking-widest text-slate-400 uppercase";
@@ -38,13 +38,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80">
             {/* Stanga: patratul portocaliu */}
             <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 relative">
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-first text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
                 Meșteri locali
               </div>
             </div>
 
             {/* Centru: totul pe mijloc */}
-            <div className="col-span-12 md:col-span-8 p-8 sm:p-16 md:border-r border-slate-200/80 flex flex-col items-center justify-center text-center min-h-[340px] sm:min-h-[420px]">
+            <div className="col-span-12 md:col-span-8 p-8 sm:p-16 md:border-r border-slate-200/80 col-center text-center min-h-[340px] sm:min-h-[420px]">
               <h1 className={`${titlu} text-3xl sm:text-5xl md:text-6xl max-w-3xl`}>
                 Găsește-ți meșterul potrivit în doar 10 secunde.
               </h1>
@@ -89,7 +89,7 @@ export default function Home() {
                 <Link
                   key={c.nr}
                   href={`/mesteri?categorie=${c.cheie}#lista`}
-                  className={`group p-8 sm:p-10 border-slate-200/80 transition-colors hover:bg-[#0F172A] ${
+                  className={`group p-8 sm:p-10 border-slate-200/80 transition-colors hover:bg-blue-first ${
                     i % 2 === 0 ? "sm:border-r" : ""
                   } ${i < 2 ? "border-b" : i === 2 ? "border-b sm:border-b-0" : ""}`}
                 >

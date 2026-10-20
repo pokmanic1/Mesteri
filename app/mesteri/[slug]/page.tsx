@@ -19,7 +19,7 @@ const Mester = async ({ params }: PageProps) => {
 
     if (!mester) {
         return (
-            <div className="min-h-screen bg-slate-100 flex flex-col items-center justify-center p-6 text-center text-[#0F172A]">
+            <div className="min-h-screen bg-slate-100 col-center p-6 text-center text-[#0F172A]">
                 <h2 className="text-2xl font-bold font-heading uppercase">
                     Meșterul nu a fost găsit
                 </h2>
@@ -42,7 +42,7 @@ const Mester = async ({ params }: PageProps) => {
             <div className="relative z-10 w-full max-w-7xl mx-auto px-4 border-x border-slate-200/80 mb-12 sm:mb-16">
                 
                 {/* Header Profile Section */}
-                <div className="border-y border-slate-200/80 p-8 sm:p-14 text-center flex flex-col justify-center items-center bg-white/30 backdrop-blur-sm">
+                <div className="border-y border-slate-200/80 p-8 sm:p-14 text-center col-center bg-white/30 backdrop-blur-sm">
                     {/* Nume Meșter */}
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight uppercase font-heading leading-[1.08] text-[#0F172A] max-w-3xl">
                         {mester.nume}
@@ -94,7 +94,7 @@ const Mester = async ({ params }: PageProps) => {
                     {mester.portofoliu.map((item) => (
                         <div 
                             key={item}
-                            className="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-slate-200/80 bg-white/60 backdrop-blur-md shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-1 flex items-center justify-center group">
+                            className="relative h-64 sm:h-72 rounded-2xl overflow-hidden border border-slate-200/80 bg-white/60 backdrop-blur-md shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-1 flex-center group">
                         
                             <div className="flex flex-col items-center gap-2 text-slate-400 group-hover:text-[#EA580C] transition-colors">
                                 <svg className="w-8 h-8 stroke-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -6,7 +6,7 @@ const TELEFON = "";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#0F172A] text-slate-300 min-w-[375px]">
+        <footer className="bg-blue-first text-slate-300 min-w-[375px]">
             <div className="max-w-7xl mx-auto px-6 py-12 grid gap-10 md:grid-cols-3">
                 <div>
                     <p className="font-heading font-bold uppercase text-white text-lg">
@@ -35,7 +35,7 @@ export default function Footer() {
                         <>
                             <a
                                 href={`viber://chat?number=${encodeURIComponent(TELEFON)}`}
-                                className="mt-4 inline-block rounded bg-[#EA580C] px-5 py-2 text-sm text-white hover:bg-[#bf4605]"
+                                className="mt-4 inline-block rounded bg-orange-first px-5 py-2 text-sm text-white hover:bg-[#bf4605]"
                             >
                                 Scrie-ne pe Viber
                             </a>

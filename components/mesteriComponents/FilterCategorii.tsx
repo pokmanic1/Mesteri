@@ -32,11 +32,11 @@ const FilterCategorii = ({ categorie, onChange }: Props) => {
           <button
             type="button"
             onClick={() => setInuputDeschis((p) => !p)}
-            className="list-none flex items-center justify-between w-full px-3 sm:px-4 py-1.5 sm:py-2.5 text-[11px] sm:text-xs font-semibold bg-[#0F172A] text-[#F8FAFC] rounded-full border sm:border-2 border-[#EA580C] shadow-sm cursor-pointer select-none focus:outline-none focus:ring-1 focus:ring-[#F59E0B] transition-all duration-300 hover:border-[#F59E0B] hover:shadow-md hover:shadow-[#EA580C]/20 active:scale-[0.98]"
+            className="list-none flex items-center justify-between w-full px-3 sm:px-4 py-1.5 sm:py-2.5 text-[11px] sm:text-xs font-semibold bg-blue-first text-[#F8FAFC] rounded-full border sm:border-2 border-[#EA580C] shadow-sm cursor-pointer select-none focus:outline-none focus:ring-1 focus:ring-[#F59E0B] transition-all duration-300 hover:border-[#F59E0B] hover:shadow-md hover:shadow-[#EA580C]/20 active:scale-[0.98]"
           >
             <span className="truncate pr-1.5 transition-colors duration-200">{numeAles}</span>
 
-            <div className="flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#EA580C] text-white shrink-0 transition-transform duration-300 group-hover:scale-110">
+            <div className="flex-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-orange-first text-white shrink-0 transition-transform duration-300 group-hover:scale-110">
               <svg
                 className={`w-2.5 h-2.5 sm:w-3 sm:h-3 transition-transform duration-300 ease-in-out ${inputDeschis ? 'rotate-0' : 'rotate-90'}`}
                 fill="none"
@@ -50,13 +50,13 @@ const FilterCategorii = ({ categorie, onChange }: Props) => {
 
           <div className={`absolute top-full left-0 w-full z-50 grid transition-[grid-template-rows] duration-300 ease-out ${inputDeschis ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
             <div className="overflow-hidden">
-              <div className={`mt-1 p-1 sm:p-1.5 bg-[#0F172A] border sm:border-2 border-[#EA580C]/40 rounded-xl sm:rounded-2xl shadow-lg backdrop-blur-md flex flex-col gap-0.5 transition-all duration-300 ${inputDeschis ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'}`}>
+              <div className={`mt-1 p-1 sm:p-1.5 bg-blue-first border sm:border-2 border-[#EA580C]/40 rounded-xl sm:rounded-2xl shadow-lg backdrop-blur-md flex flex-col gap-0.5 transition-all duration-300 ${inputDeschis ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'}`}>
                 {categorii.map((c) => (
                   <button
                     key={c.cheie}
                     type="button"
                     onClick={() => handleCategorie(c.cheie)}
-                    className={`w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium hover:bg-[#EA580C] hover:text-white hover:translate-x-1 active:scale-[0.98] rounded-lg transition-all duration-200 ease-in-out truncate ${
+                    className={`w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium hover:bg-orange-first hover:text-white hover:translate-x-1 active:scale-[0.98] rounded-lg transition-all duration-200 ease-in-out truncate ${
                       c.cheie === categorie ? 'text-[#F59E0B]' : 'text-slate-200'
                     }`}
                   >

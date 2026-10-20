@@ -68,9 +68,9 @@ const servicii = [
 
 // Model fix de patrate (fara random, ca sa nu apara erori de hidratare)
 const patrate = [
-  "border border-slate-300", "bg-slate-300/60", "border border-slate-300", "bg-[#EA580C] animate-pulse",
-  "bg-slate-300/60", "bg-[#0F172A]", "border border-slate-300", "bg-slate-300/60",
-  "border border-slate-300", "border border-slate-300", "bg-[#F59E0B] animate-pulse", "bg-slate-300/60",
+  "border border-slate-300", "bg-slate-300/60", "border border-slate-300", "bg-orange-first animate-pulse",
+  "bg-slate-300/60", "bg-blue-first", "border border-slate-300", "bg-slate-300/60",
+  "border border-slate-300", "border border-slate-300", "bg-yellow-first animate-pulse", "bg-slate-300/60",
 ];
 
 export default function Servicii() {
@@ -86,13 +86,13 @@ export default function Servicii() {
           <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80">
             {/* Stanga: patratul portocaliu */}
             <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 relative">
-              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-first text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
                 Fără comision
               </div>
             </div>
 
             {/* Centru: totul pe mijloc */}
-            <div className="col-span-12 md:col-span-8 p-8 sm:p-16 md:border-r border-slate-200/80 flex flex-col items-center justify-center text-center min-h-[340px] sm:min-h-[420px]">
+            <div className="col-span-12 md:col-span-8 p-8 sm:p-16 md:border-r border-slate-200/80 col-center text-center min-h-[340px] sm:min-h-[420px]">
               <span className={label}>Servicii</span>
               <h1 className={`${titlu} mt-5 text-3xl sm:text-5xl md:text-6xl max-w-3xl`}>
                 Ce ai de rezolvat?
@@ -135,7 +135,7 @@ export default function Servicii() {
                 <Link
                   key={s.cheie}
                   href={`/mesteri?categorie=${s.cheie}#lista`}
-                  className={`group grid grid-cols-1 md:grid-cols-12 transition-colors hover:bg-[#0F172A] ${
+                  className={`group grid grid-cols-1 md:grid-cols-12 transition-colors hover:bg-blue-first ${
                     i < servicii.length - 1 ? "border-b border-slate-200/80" : ""
                   }`}
                 >
@@ -151,7 +151,7 @@ export default function Servicii() {
                     <p className={`${label} mt-3`}>
                       {nr} {nr === 1 ? "meșter" : "meșteri"}
                     </p>
-                    <span className="mt-6 inline-block bg-[#EA580C] text-white text-xs sm:text-sm px-5 py-2 rounded transition-transform duration-200 group-hover:translate-x-1">
+                    <span className="mt-6 inline-block bg-orange-first text-white text-xs sm:text-sm px-5 py-2 rounded transition-transform duration-200 group-hover:translate-x-1">
                       {s.buton} →
                     </span>
                   </div>
@@ -162,7 +162,7 @@ export default function Servicii() {
                         key={l}
                         className="flex items-center gap-3 text-sm sm:text-base text-slate-700 group-hover:text-slate-200 transition-colors"
                       >
-                        <span className="w-2 h-2 shrink-0 bg-[#F59E0B]" />
+                        <span className="w-2 h-2 shrink-0 bg-yellow-first" />
                         {l}
                       </li>
                     ))}

@@ -28,7 +28,7 @@ const OrangeButon = (props: any) => {
             whileHover={{ scale: 1.05, }}
             whileTap={{ scale: 0.9, }}
             transition={{ type: "spring", damping: 7, stiffness: 300 }}
-            className="butoaneMobile inline-block bg-[#EA580C] hover:bg-[#bf4605] text-[12px] sm:text-[14px] md:text-[16px] text-white font-sans px-4 sm:px-5 md:px-6 lg:px-7 py-1 rounded border border-blue-400/30 transition-colors"
+            className="butoaneMobile inline-block bg-orange-first hover:bg-[#bf4605] text-[12px] sm:text-[14px] md:text-[16px] text-white font-sans px-4 sm:px-5 md:px-6 lg:px-7 py-1 rounded border border-blue-400/30 transition-colors"
         >
             {props.continut}
         </MotionLink>

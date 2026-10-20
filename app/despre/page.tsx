@@ -22,7 +22,7 @@ const DespreNoi = () => {
                             </span>
                         </div>
 
-                        <div className="col-span-12 md:col-span-8 p-8 sm:p-16 text-center border-r border-slate-200/80 flex flex-col justify-center items-center">
+                        <div className="col-span-12 md:col-span-8 p-8 sm:p-16 text-center border-r border-slate-200/80 col-center">
                             <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight uppercase font-heading leading-[1.08] text-[#0F172A] max-w-3xl">
                                 SUNTEM CONSTRUCTORII CARE CREAZĂ PLATFORMA PE CARE NE-AM DORIT-O MEREU
                             </h1>
@@ -35,7 +35,7 @@ const DespreNoi = () => {
                             <span className="text-[10px] font-sans tracking-widest text-slate-400 uppercase sticky top-24">
                                 WE BUILT THE FIX
                             </span>
-                            <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+                            <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-first text-white text-[10px] font-bold font-sans py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
                                 STANDARDE PRO
                             </div>
                         </div>
@@ -53,7 +53,7 @@ const DespreNoi = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80 relative items-center">
 
-                        <div className="col-span-12 md:col-span-6 p-6 sm:p-10 border-b md:border-b-0 md:border-r border-slate-200/80 flex justify-center items-center">
+                        <div className="col-span-12 md:col-span-6 p-6 sm:p-10 border-b md:border-b-0 md:border-r border-slate-200/80 flex-center">
                             <div className="relative w-full min-h-[400px] sm:min-h-[480px] rounded-lg overflow-hidden border border-slate-200/80 bg-white/80 backdrop-blur-md">
                                 <Image
                                     src={'/Despre/GrupMesteriPhoto1.jpg'}
@@ -67,7 +67,7 @@ const DespreNoi = () => {
 
                         <div className="col-span-12 md:col-span-6 p-8 sm:p-12 relative flex flex-col justify-center">
 
-                            <div className="hidden md:flex absolute right-4 sm:right-8 md:right-12 top-3 -translate-y-1/2 bg-[#EA580C] text-white text-[6px] sm:text-[8px] md:text-[10px] font-bold font-sans py-2 sm:py-3 md:py-4 lg:py-6 px-1.5  uppercase tracking-widest">
+                            <div className="hidden md:flex absolute right-4 sm:right-8 md:right-12 top-3 -translate-y-1/2 bg-orange-first text-white text-[6px] sm:text-[8px] md:text-[10px] font-bold font-sans py-2 sm:py-3 md:py-4 lg:py-6 px-1.5  uppercase tracking-widest">
                                 STANDARDE PRO
                             </div>
 
@@ -88,7 +88,7 @@ const DespreNoi = () => {
             {/* -------------------------------------------------------------------------- */}
             {/* ----------------------Harta si cele 3 carduri----------------------------- */}
             <div className='relative z-10 w-[90%] max-w-[1200px] gap-8 md:gap-10 grid grid-cols-1 md:grid-cols-2 items-stretch my-auto'>
-                <div className="map-card relative min-h-[380px] sm:min-h-[420px] rounded-2xl overflow-hidden bg-[#0F172A] border border-slate-200/80 shadow-xl transition-all duration-300 hover:shadow-2xl">
+                <div className="map-card relative min-h-[380px] sm:min-h-[420px] rounded-2xl overflow-hidden bg-blue-first border border-slate-200/80 shadow-xl transition-all duration-300 hover:shadow-2xl">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52823.242480449946!2d28.160000625026832!3d45.90771685604771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b65c95ca29ef7d%3A0x254c4e01d94d6250!2sCahul%2C%20Moldova!5e0!3m2!1sro!2sit!4v1786427709694!5m2!1sro!2sit"
                         width="100%"
@@ -105,7 +105,7 @@ const DespreNoi = () => {
 
                     <div className="info-card group rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-md p-6 text-[#0F172A] shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-0.5">
                         <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-[#EA580C]" />
+                            <div className="w-2 h-2 rounded-full bg-orange-first" />
                             <h3 className="text-lg font-bold tracking-wide font-heading text-[#0F172A]">Adresă</h3>
                         </div>
                         <p className="mt-2 text-sm text-slate-700 font-medium">Strada X, nr. 12</p>
@@ -115,7 +115,7 @@ const DespreNoi = () => {
 
                     <div className="info-card group rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-md p-6 text-[#0F172A] shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-0.5">
                         <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-[#F59E0B]" />
+                            <div className="w-2 h-2 rounded-full bg-yellow-first" />
                             <h3 className="text-lg font-bold tracking-wide font-heading text-[#0F172A]">Social Media &amp; Email</h3>
                         </div>
                         <p className="mt-2 text-sm text-slate-700 font-medium">abcd@gmail.com</p>
@@ -125,7 +125,7 @@ const DespreNoi = () => {
 
                     <div className="info-card group rounded-2xl border border-slate-200/80 bg-white/80 backdrop-blur-md p-6 text-[#0F172A] shadow-sm transition-all duration-300 hover:border-[#F59E0B]/50 hover:shadow-md hover:-translate-y-0.5">
                         <div className="flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-[#0F172A]" />
+                            <div className="w-2 h-2 rounded-full bg-blue-first" />
                             <h3 className="text-lg font-bold tracking-wide font-heading text-[#0F172A]">Telefon &amp; Program</h3>
                         </div>
                         <p className="mt-2 text-sm text-slate-700 font-medium">+373 123 456 789</p>
