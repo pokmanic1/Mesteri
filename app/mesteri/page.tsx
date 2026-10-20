@@ -1,8 +1,6 @@
-'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import { OrangeButon } from '@/components/Buton';
 import { arrMesteri } from '@/utility/constants';
 import FilterCategorii from '@/components/mesteriComponents/FilterCategorii';
@@ -18,15 +16,9 @@ const patrate = [
   "border border-slate-300", "border border-slate-300", "bg-yellow-first animate-pulse", "bg-slate-300/60",
 ];
 
-const Mesteri = () => {
-
-
-  const searchParams = useSearchParams();
-  console.log("searchParams")
-  console.log("searchParams")
-  console.log("searchParams")
-  console.log(searchParams)
-  const [categorie, setCategorie] = useState(searchParams.get('categorie') || 'toate');
+const Mesteri = async ({ searchParams }: { searchParams: Promise<{ categorie?: string }> }) => {
+  // categoria vine din URL: /mesteri?categorie=electric
+  const { categorie = 'toate' } = await searchParams;
 
   const arrFiltrat =
     categorie === 'toate'
@@ -79,7 +71,7 @@ const Mesteri = () => {
         </div>
       </div>
 
-      <FilterCategorii categorie={categorie} onChange={setCategorie} />
+      <FilterCategorii categorie={categorie} />
 
       <div id="lista" className="w-full scroll-mt-20 grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-[6px] sm:gap-3 md:gap-4 p-2 sm:p-6 md:p-10 relative z-10">
         {arrFiltrat.length === 0 && (

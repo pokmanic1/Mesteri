@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const categorii = [
   { cheie: 'toate', nume: 'Toate Categoriile' },
@@ -10,19 +11,13 @@ const categorii = [
 ];
 
 type Props = {
-  categorie: string; // cheia aleasa acum (ex: 'electric')
-  onChange: (cheie: string) => void; // anunta pagina ca s-a ales altceva
+  categorie: string; // cheia din URL (ex: 'electric')
 };
 
-const FilterCategorii = ({ categorie, onChange }: Props) => {
+const FilterCategorii = ({ categorie }: Props) => {
   const [inputDeschis, setInuputDeschis] = useState(false);
 
   const numeAles = categorii.find((c) => c.cheie === categorie)?.nume ?? 'Toate Categoriile';
-
-  const handleCategorie = (cheie: string) => {
-    onChange(cheie);
-    setInuputDeschis(false);
-  };
 
   return (
     <div className="w-full px-2 sm:px-6 md:px-10">
@@ -52,16 +47,17 @@ const FilterCategorii = ({ categorie, onChange }: Props) => {
             <div className="overflow-hidden">
               <div className={`mt-1 p-1 sm:p-1.5 bg-blue-first border sm:border-2 border-[#EA580C]/40 rounded-xl sm:rounded-2xl shadow-lg backdrop-blur-md flex flex-col gap-0.5 transition-all duration-300 ${inputDeschis ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'}`}>
                 {categorii.map((c) => (
-                  <button
+                  <Link
                     key={c.cheie}
-                    type="button"
-                    onClick={() => handleCategorie(c.cheie)}
-                    className={`w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium hover:bg-orange-first hover:text-white hover:translate-x-1 active:scale-[0.98] rounded-lg transition-all duration-200 ease-in-out truncate ${
+                    href={c.cheie === 'toate' ? '/mesteri' : `/mesteri?categorie=${c.cheie}`}
+                    scroll={false}
+                    onClick={() => setInuputDeschis(false)}
+                    className={`block w-full text-left px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-xs font-medium hover:bg-orange-first hover:text-white hover:translate-x-1 active:scale-[0.98] rounded-lg transition-all duration-200 ease-in-out truncate ${
                       c.cheie === categorie ? 'text-[#F59E0B]' : 'text-slate-200'
                     }`}
                   >
                     {c.nume}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
