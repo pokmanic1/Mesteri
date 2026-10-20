@@ -134,7 +134,7 @@ export default function Servicii() {
               return (
                 <Link
                   key={s.cheie}
-                  href="/mesteri"
+                  href={`/mesteri?categorie=${s.cheie}#lista`}
                   className={`group grid grid-cols-1 md:grid-cols-12 transition-colors hover:bg-[#0F172A] ${
                     i < servicii.length - 1 ? "border-b border-slate-200/80" : ""
                   }`}

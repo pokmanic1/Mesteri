@@ -16,7 +16,7 @@ const Navbar = () => {
         <>
             <nav className=" min-w-[375px] w-full flex justify-between items-center sticky top-0 z-50 bg-[#F8FAFC] border-b border-gray-300 h-[60px] px-10">
 
-                <Link href='/' className="logo relative h-[60px] w-[180px] block">
+                <Link href='/' className="logo relative h-[90px] w-[180px] block">
                     <Image
                         src={logo}
                         alt="logo"

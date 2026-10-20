@@ -2,16 +2,23 @@ import Link from "next/link";
 import { OrangeButon, WhiteButon } from "@/components/Buton";
 
 const categorii = [
-  { nr: "01", nume: "Electricieni", text: "Prize, tablouri, iluminat, defecțiuni" },
-  { nr: "02", nume: "Instalatori", text: "Țevi, centrale, boilere, canalizare" },
-  { nr: "03", nume: "Zugravi", text: "Zugrăveli, gletuit, tapet, rigips" },
-  { nr: "04", nume: "Ingineri", text: "Proiecte, consultanță, topografie" },
+  { nr: "01", cheie: "electric", nume: "Electricieni", text: "Prize, tablouri, iluminat, defecțiuni" },
+  { nr: "02", cheie: "instalator", nume: "Instalatori", text: "Țevi, centrale, boilere, canalizare" },
+  { nr: "03", cheie: "zugrav", nume: "Zugravi", text: "Zugrăveli, gletuit, tapet, rigips" },
+  { nr: "04", cheie: "inginer", nume: "Ingineri", text: "Proiecte, consultanță, topografie" },
 ];
 
 const pasi = [
   { nr: "01", titlu: "Alegi categoria", text: "Electrician, instalator, zugrav sau inginer." },
   { nr: "02", titlu: "Vezi meșterul", text: "Lucrări reale și ani de experiență, clar afișate." },
   { nr: "03", titlu: "Suni direct", text: "Un singur click. Fără intermediari, fără comision." },
+];
+
+// Model fix de patrate (fara random, ca sa nu apara erori de hidratare)
+const patrate = [
+  "border border-slate-300", "bg-slate-300/60", "border border-slate-300", "bg-[#EA580C] animate-pulse",
+  "bg-slate-300/60", "bg-[#0F172A]", "border border-slate-300", "bg-slate-300/60",
+  "border border-slate-300", "border border-slate-300", "bg-[#F59E0B] animate-pulse", "bg-slate-300/60",
 ];
 
 const label = "text-[10px] font-mono tracking-widest text-slate-400 uppercase";
@@ -25,14 +32,19 @@ export default function Home() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[500px] bg-gradient-to-b from-[#F59E0B]/10 via-[#EA580C]/5 to-transparent blur-3xl pointer-events-none" />
       <div className="absolute -top-20 left-1/3 w-[500px] h-[500px] bg-[#F59E0B]/15 rounded-full blur-[120px] pointer-events-none" />
 
+      {/* HERO */}
       <section id="hero" className="pt-10 sm:pt-16">
         <div className={frame}>
           <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80">
-            <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 p-4">
-              <span className={label}>Meșteri locali</span>
+            {/* Stanga: patratul portocaliu */}
+            <div className="hidden md:block md:col-span-2 border-r border-slate-200/80 relative">
+              <div className="absolute left-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-mono py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
+                Meșteri locali
+              </div>
             </div>
 
-            <div className="col-span-12 md:col-span-8 p-8 sm:p-16 text-center border-r border-slate-200/80 flex flex-col items-center justify-center">
+            {/* Centru: totul pe mijloc */}
+            <div className="col-span-12 md:col-span-8 p-8 sm:p-16 md:border-r border-slate-200/80 flex flex-col items-center justify-center text-center min-h-[340px] sm:min-h-[420px]">
               <h1 className={`${titlu} text-3xl sm:text-5xl md:text-6xl max-w-3xl`}>
                 Găsește-ți meșterul potrivit în doar 10 secunde.
               </h1>
@@ -46,18 +58,24 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="hidden md:block md:col-span-2 p-4 relative">
+            {/* Dreapta: eticheta + cateva patrate */}
+            <div className="hidden md:flex md:col-span-2 p-4 flex-col justify-between">
               <span className={label}>Gratuit la start</span>
-              <div className="absolute right-0 top-1/2 -translate-y-1/2 bg-[#EA580C] text-white text-[10px] font-bold font-mono py-6 px-1.5 [writing-mode:vertical-rl] rotate-180 uppercase tracking-widest">
-                Apel direct
+              <div className="grid grid-cols-4 gap-1.5" aria-hidden="true">
+                {patrate.map((c, i) => (
+                  <div
+                    key={i}
+                    className={`aspect-square ${c}`}
+                    style={{ animationDelay: `${i * 0.15}s` }}
+                  />
+                ))}
               </div>
             </div>
           </div>
-
-         
         </div>
       </section>
 
+      {/* CATEGORII */}
       <section className="mt-16 sm:mt-24">
         <div className={frame}>
           <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80">
@@ -70,7 +88,7 @@ export default function Home() {
               {categorii.map((c, i) => (
                 <Link
                   key={c.nr}
-                  href="/mesteri"
+                  href={`/mesteri?categorie=${c.cheie}#lista`}
                   className={`group p-8 sm:p-10 border-slate-200/80 transition-colors hover:bg-[#0F172A] ${
                     i % 2 === 0 ? "sm:border-r" : ""
                   } ${i < 2 ? "border-b" : i === 2 ? "border-b sm:border-b-0" : ""}`}
@@ -90,9 +108,8 @@ export default function Home() {
       </section>
 
       {/* PASI */}
-      <section className="mt-16 sm:mt-24">
+      <section className="mt-16 sm:mt-24 pb-16 sm:pb-24">
         <div className={frame}>
-          <div className="border-t border-slate-500/80 mb-8 sm:mb-12" />
           <div className="grid grid-cols-1 md:grid-cols-3 border-y border-slate-200/80">
             {pasi.map((p, i) => (
               <div
@@ -113,28 +130,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* CTA */}
-      {/* <section className="mt-16 sm:mt-24 pb-16 sm:pb-24">
-        <div className={frame}>
-          <div className="grid grid-cols-1 md:grid-cols-12 border-y border-slate-200/80 bg-[#0F172A]">
-            <div className="md:col-span-8 p-8 sm:p-14">
-              <span className="text-[10px] font-mono tracking-widest text-[#F59E0B] uppercase">Pentru meșteri</span>
-              <h2 className="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight uppercase font-[var(--font-montserrat)] leading-[1.08] text-white">
-                Ești meșter? Înscrie-te gratuit.
-              </h2>
-              <p className="mt-5 text-xs sm:text-sm text-slate-300 max-w-md leading-relaxed">
-                Primii meșteri apar gratuit pe platformă și primesc apeluri direct de la clienți.
-              </p>
-            </div>
-            <div className="md:col-span-4 p-8 sm:p-14 flex items-center md:justify-end border-t md:border-t-0 md:border-l border-white/10">
-              <OrangeButon link="/contact" continut="Contactează-ne" />
-            </div>
-          </div>
-        </div>
-      </section> */}
-
-        
     </div>
   );
 }

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { OrangeButon } from '@/components/Buton';
 import { arrMesteri } from '@/utility/constants';
 import FilterCategorii from '@/components/mesteriComponents/FilterCategorii';
@@ -18,7 +19,14 @@ const patrate = [
 ];
 
 const Mesteri = () => {
-  const [categorie, setCategorie] = useState('toate');
+
+
+  const searchParams = useSearchParams();
+  console.log("searchParams")
+  console.log("searchParams")
+  console.log("searchParams")
+  console.log(searchParams)
+  const [categorie, setCategorie] = useState(searchParams.get('categorie') || 'toate');
 
   const arrFiltrat =
     categorie === 'toate'
